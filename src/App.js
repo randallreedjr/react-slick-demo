@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Slider from 'react-slick';
 
+const mediaOffset = 3;
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -27,6 +29,7 @@ class App extends Component {
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1,
+      initialSlide: mediaOffset,
       center: true,
     };
     return (

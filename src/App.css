@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+h3 {
+  background: #5f9ea0;
+  color: #fff;
+  font-size: 36px;
+  line-height: 100px;
+  margin: 10px;
+  padding: 2%;
+  position: relative;
+  text-align: center;
+}
+
+.button, .variable-width .slick-slide p {
+  font-family: verdana;
+  background: #5f9ea0;
+  color: #fff;
+}
+
+.button {
+  font-size: .9rem;
+  display: inline-block;
+  width: auto;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 1rem 1rem 0;
+}
+
+.slick-next, .slick-prev {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: none;
+}
+
+.slick-next, .slick-next:focus, .slick-next:hover, .slick-prev, .slick-prev:focus, .slick-prev:hover {
+  color: transparent;
+  outline: none;
+  background: transparent;
+}
+
+section {
+  min-height: 500px;
+  padding: 2em;
+  background: rgb(255, 255, 255);
+  margin: 0em 4em 4em 1em;
+  border-radius: 5px;
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: #000;
+}
+.slick-prev:before {
+  content: "\2190";
+}
+.slick-next:before, .slick-prev:before {
+  font-family: slick;
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

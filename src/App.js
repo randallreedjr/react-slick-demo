@@ -12,9 +12,12 @@ class App extends Component {
   }
   click() {
     const { slides } = this.state;
+    const currentLength = slides.length;
+    const newLength = currentLength + 3;
+    const newSlides = Array(newLength).fill().map((_, index) => index + 1);
+
     this.setState({
-      slides:
-        slides.length === 6 ? [1, 2, 3, 4, 5, 6, 7, 8, 9] : [1, 2, 3, 4, 5, 6]
+      slides: newSlides
     });
   }
   render() {

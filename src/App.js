@@ -20,10 +20,12 @@ class App extends Component {
   render() {
     const settings = {
       dots: true,
-      infinite: true,
+      infinite: false,
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 3
+      slidesToScroll: 1,
+      initialSlide: mediaOffset,
+      center: true,
     };
     return (
       <section>

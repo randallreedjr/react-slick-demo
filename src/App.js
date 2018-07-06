@@ -24,13 +24,13 @@ class App extends Component {
   }
   render() {
     const settings = {
+      center: true,
       dots: true,
       infinite: false,
-      speed: 500,
+      initialSlide: mediaOffset,
       slidesToShow: 3,
       slidesToScroll: 1,
-      initialSlide: mediaOffset,
-      center: true,
+      speed: 500,
     };
     return (
       <section>

@@ -12,6 +12,7 @@ class App extends Component {
     };
     this.click = this.click.bind(this);
   }
+
   click() {
     const { slides } = this.state;
     const currentLength = slides.length;
@@ -22,10 +23,12 @@ class App extends Component {
       slides: newSlides
     });
   }
+
   render() {
     const settings = {
-      center: true,
-      dots: true,
+      centerMode: true,
+      defaultWidth: this.props.maxWidth,
+      dots: false,
       infinite: false,
       initialSlide: mediaOffset,
       slidesToShow: 3,
@@ -37,17 +40,20 @@ class App extends Component {
         <div>
           <h2>Dynamic slides</h2>
           <button className="button" onClick={this.click}>
-            Click to change slide count
+            Load more slides
           </button>
-          <Slider {...settings}>
-            {this.state.slides.map(function(slide) {
-              return (
-                <div key={slide}>
-                  <h3>{slide}</h3>
-                </div>
-              );
-            })}
-          </Slider>
+          <div className="carousel-container">
+            <Slider {...settings}>
+              {this.state.slides.map(function(slide, index) {
+                return (
+                  <div key={slide} className="h3-container">
+                    {/* <h3 style={{width: index % 3 == 0 ? thinWidth : normalWidth}}>{slide}</h3> */}
+                    <h3>{slide}</h3>
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
         </div>
       </section>
     );

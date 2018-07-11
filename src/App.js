@@ -50,7 +50,7 @@ class App extends Component {
               {this.state.slides.map(function(slide, index) {
                 return (
                   <div key={slide} className="h3-container">
-                    <h3 style={{width: index % 3 == 0 ? thinWidth : normalWidth}}>{slide}</h3>
+                    <h3 style={{width: index % 3 === 0 ? thinWidth : normalWidth}}>{slide}</h3>
                   </div>
                 );
               })}
